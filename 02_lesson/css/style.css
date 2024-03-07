@@ -1,0 +1,52 @@
+/* *{
+    border: 1px solid black
+}  este selector asterisco en realidad no causa inheritance sino que selecciona todos los elementos*/
+
+
+html {
+    font-size: 22px;
+}
+body {
+
+   /* border: 3px solid black -- esta regla no se heredaria */  
+}
+
+main {
+    font-family: monospace;
+
+}
+h1, h2{
+    color: blue
+}
+button, input, textarea, select {
+    /* Estos elementos por defecto no heredan*/
+    font: inherit
+}
+
+
+
+.gray {
+    color: gray
+}
+
+
+p {
+    color: purple;
+}
+
+p {
+    /* Sobreescribe al purpura porque es leido despues por el browser
+    Sin embargo, la clase gray tiene mayor especificidad y a los p marcado con gray se le aplica su regla 
+    */
+    color: red
+}
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold
+}
+
+
+#second {
+    font-style: italic;
+}
